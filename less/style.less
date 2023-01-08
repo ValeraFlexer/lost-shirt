@@ -1,0 +1,586 @@
+@font-face {
+	font-family: "alegreya";
+	src: url('/fonts/AlegreyaSansSC-Black.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+.alegreya() {
+	font-family: "alegreya", sans-serif;
+}
+
+.yanone() {
+	font-family: "Yanone Kaffeesatz", sans-serif;
+}
+
+@yellow: #ffc92f;
+@red: #d82727;
+@black : #1b1b1b;
+
+html, body {
+	height: 100%;
+}
+
+body{
+	font: 1.6rem / 1.43 "Roboto", sans-serif;
+	color: #212121;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background: #fcf5e6;
+}
+
+html {
+	font-size: 10px;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+ul > li {
+	list-style: none;
+}
+
+.btn {
+	text-transform: uppercase;
+	text-decoration: none;
+	.yanone();
+	color: @yellow;
+	font-size: 2.4rem;
+	padding: 0.4rem 3rem 0.2rem 3rem;
+	background: @black;
+	&:hover {
+		background: @red;
+		color: #fff;
+	}
+}
+
+.header {
+	width: 129rem;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 2.7rem;
+	&-mail {
+		text-decoration: none;
+		text-align: center;
+		font-size: 1.6rem;
+		color: inherit;
+		&-text {
+			margin-bottom: 0.3rem;
+		}
+		&-address {
+			background: #212121;
+			color: @yellow;
+			font-size: 1.6rem;
+			padding: 0.5rem 1rem;
+		}
+	}
+}
+
+.wrapper {
+	overflow: hidden;
+	min-width: 142rem;
+}
+
+.main {
+	background: url(/img/bg/hero.jpg) center center / cover no-repeat;
+	height: 100vh;
+	min-height: 650px;
+	position: relative;
+	margin-bottom: 13rem;
+	&-slider {
+		width: 100%;
+		height: 100%;
+		position: relative;
+		&-item {
+			background: center center / contain no-repeat;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+			transition: opacity .3s;
+			&-tshirts {
+				background-image: url(/img/content/hero/slider_pic_1.png);
+			}
+			&-games {
+				background-image: url(/img/content/hero/slider_pic_2.png);
+			}
+			&-gifts {
+				background-image: url(/img/content/hero/slider_pic_3.png);
+			}
+			&-active {
+				opacity: 1;
+			}
+		}
+		&-block {
+				.alegreya();
+				color: #fff;
+				font-size: 6.3rem;
+				text-transform: uppercase;	
+				line-height: 1;
+				display: flex;
+				flex-direction: column;
+			&-tshirts {	
+				align-items: flex-start;
+			}
+			&-games {
+				align-items: center;
+			}
+			&-gifts {
+				align-items: center;
+			}
+					
+			&-word {
+				&-tshirts {
+					background: #000;
+					padding: 0 1.7rem 0.8rem;
+					margin-top: -0.7rem;
+					&:nth-child(2n) {
+						margin-left: 0.8rem;
+					}
+					&:nth-child(3) {
+						color: @yellow;
+					}
+					&:nth-child(4) {
+						color: @yellow;
+					}
+				}
+				&-games {
+					background: #000;
+					padding: 0 1.7rem 0.8rem;
+					margin-top: -0.7rem;
+					&:nth-child(2) {
+						color: @yellow;
+					}
+				}
+				&-gifts {
+					background: #000;
+					padding: 0 1.7rem 0.8rem;
+					margin-top: -0.7rem;
+					&:nth-child(2) {
+						color: @yellow;
+					}
+				}
+			}
+		}
+		&-text {
+			&-tshirts {
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-164%, -52%);
+			}
+			&-games {
+				position: absolute;
+				bottom: -5rem;
+				left: 0;
+				right: 0;
+			}
+			&-gifts {
+				position: absolute;
+				left: 0;
+				bottom: 10rem;
+			}
+		}
+	}
+	&-content {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 114rem;
+		height: 72%;
+	}
+}
+
+.product {
+	margin-bottom: 16rem;
+	&-container {
+		margin: 0 auto;
+		width: 130rem;
+	}
+	&-menu {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: -1.5rem;
+		margin-bottom: 10rem;
+		&-btn {
+			.yanone();
+			text-transform: uppercase;
+			padding: 0.5rem 2.1rem 0.1rem 2.1rem;
+			color: @black;	
+			font-size: 2.4rem;
+			font-weight: bold;
+			display: inline-block;		
+			text-decoration: none;	
+			&:hover {
+				color: @red;
+			}
+			&-wrap {
+				margin-right: 4rem;
+				&:last-child {
+					margin-right: 0;
+				}
+				&-active {
+					color: @yellow; 
+					background: @black;
+				}
+			}
+		}
+	}
+	&-list {
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: -2.7rem;
+		&-item {
+			width: 30.2rem;
+			height: 38.6rem;
+			background: @yellow;
+			margin-bottom: 3.5rem;
+			margin-left: 2.7rem;
+			position: relative;
+			&-content {
+				height: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				position: relative;
+				overflow: hidden;
+				& > img {
+					    display: block;
+   						max-width: 90%;
+    					max-height: 100%;
+				}
+			}
+			&-desc {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				padding: 1.8rem 3rem 2.8rem 3rem;
+				background: rgba(35, 35, 35, 0.8);
+				font-size: 1.5rem;
+				color: #fff;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				transform: translateY(100%);
+				transition: transform 0.3s;
+				&-text {
+					text-align: center;
+					margin-bottom: 1.8rem;
+				}
+			}
+			&:hover .product-list-item-desc {
+				transform: translateY(0%);
+			}
+			&-color {
+				background: #232323;
+			}
+			&-size {
+				width: 63rem;
+				height: 54.4rem;
+			}
+			&-price {
+				position: absolute;
+				top: 1.8rem;
+				left: -0.6rem;
+				width: 12.6rem;
+				border-bottom: 4.5rem solid #232323;
+				border-left: 0.5rem solid transparent;
+				border-right: 0.2rem solid transparent;
+				transform: rotate(179deg);
+				&-text {
+					font-size: 3rem;
+					font-weight: bold;
+					.yanone();
+					color: #fff;
+					transform: rotate(-179deg);
+					position: absolute;
+					top: 0rem;
+					right: 2.8rem;
+					&-color {
+						color: @black;
+					}
+				}
+				&-color {
+					border-bottom-color: @yellow;
+				}
+			}
+		}
+	}
+}
+
+.product-menu-btn-wrap-active .product-menu-btn {
+	color: @yellow;
+	background: @black;
+}
+
+.collection {
+	margin-bottom: 13.5rem;
+	&-container {
+		margin: 0 auto;
+		width: 130rem;
+	}
+	&-content {
+		display: flex;
+		&-item {
+			min-height: 47.4rem;
+			flex: 1;
+			overflow: hidden;
+			margin-right: 3rem;
+			background: url(/img/bg/pattern.png) center center / 50rem;
+			position: relative;
+			&:last-child {
+				margin-right: 0;
+			}
+			&-mans, &-womans {
+				&::before {
+					content: '';
+  					display: block;
+  					position: absolute;
+ 					height: 176%;
+  					width: 60%;
+  					top: -17%;
+  					background: center center / contain no-repeat;	
+				}
+			}
+			&-mans::before {
+				background-image: url(/img/collections/collection_man.png);
+				left: -18%;
+				top: -17%;
+			}
+			&-womans::before {
+				background-image: url(/img/collections/collection_woman.png);
+				top: -31%;
+				width: 80%;
+				left: -25%;
+			}
+		}
+		&-link {
+			display: block;
+			padding: 7.4rem 13% 7.4rem 44%;
+			text-decoration: none;
+			color: inherit;
+			font-size: 1.5rem;
+			position: relative;
+			height: 100%;
+			box-sizing: border-box;
+			&:hover .btn {
+				background: @red;
+				color: #fff;
+			}
+		}
+		&-title {
+			.yanone();
+			font-size: 7rem;
+			font-weight: bold;
+			line-height: 1;
+			text-transform: uppercase;
+			margin-top: 0;
+			margin-bottom: 1.1rem;
+		}
+		&-description {
+			margin-bottom: 2.8rem;
+		}
+		&-btn {
+			padding: 0.8rem 3rem 0.5rem 3rem;
+		}
+	}
+}
+
+.footer {
+	margin-bottom: 11.5rem;
+	&-container {
+		width: 110.5rem;
+		margin: 0 auto;
+	}
+}
+
+.site {
+	&-menu {
+		margin-bottom: 11.5rem;
+		&-sections {
+			display: flex;
+			justify-content: space-between;
+		}
+		&-col {
+			margin-right: 2rem;
+			&:last-child {
+				margin-right: 0;
+			}
+			&-title {
+				.yanone();
+				font-size: 2.4rem;
+				font-weight: bold;
+				color: @black;
+				text-transform: uppercase;
+				margin-bottom: 2.4rem;
+			}
+			&-list {
+				margin-bottom: 1.5rem;
+				&-item {
+					color: #737373;
+					font-size: 1.5rem;
+					text-decoration: none;
+					&:hover {
+						color: @red;
+					}
+				}
+			}
+		}
+		&-text {
+			font-size: 1.5rem;
+			color: @black;
+			margin-bottom: 3rem;
+			&-row {
+				color: inherit;
+				text-decoration: none;
+				display: block;
+				margin-bottom: 0.5rem;
+			}
+		}
+	}
+}
+
+.extras {
+	display: flex;
+	padding-bottom: 9.5rem;
+	&-col {
+		margin-right: 2rem;
+		flex: 1;
+		&:last-child {
+			margin-right: 0;
+		}
+		&-link {
+			text-align: center;
+			text-decoration: none;
+			.yanone();
+			font-size: 5rem;
+			font-weight: bold;
+			color: #fff;
+			background: #232323;
+			text-transform: uppercase;
+			padding: 3.9rem 10%;
+			display: block;
+			line-height: 1;
+		}
+		&-socials {
+			height: 100%;
+			background: url(/img/bg/pattern.png) center center / 50rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			&-item {
+				margin-right: 5rem;
+				&:last-child {
+					margin-right: 0;
+				}
+				&-link {
+					width: 3.8rem;
+					height: 3.8rem;
+					display: block;
+				}
+				&-svg {
+					height: 100%;
+					width: 100%;
+					&:hover {
+						fill: @red;
+					}
+				}
+			}
+		}
+	}
+}
+
+.sidebar {
+	width: 7.5rem;
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	background: #212121;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	transition: width 0.3s;
+	&-header {
+		position: absolute;
+		top: 2.9rem;
+		left: 0;
+		right: 0;
+		display: none;
+		justify-content: center;
+		&-logo {
+			&-img {
+
+			}
+		}	
+	}
+	&-close {
+		position: absolute;
+		top: -0.4rem;
+		right: 2.3rem;
+		&-icon {
+			width: 2.9rem;
+			height: 2.9rem;
+			fill: @yellow;
+		}
+	}
+	&-menu {
+		position: absolute;
+		left: -40rem;
+		transition: left .3s;
+		&-list {
+			&-item {
+				margin-bottom: 2rem;
+				&-link {
+					font-size: 2rem;
+					color: @yellow;
+					text-decoration: none;
+					text-transform: uppercase;
+					.yanone();
+					&:hover {
+						color: @red;
+					}
+				}
+			}
+		}
+	}
+	&-opened {
+		width: 32.5rem;
+		padding: 0 3% 0 4%;
+	}
+	&-opened .sidebar-header {
+		display: flex;
+	}
+	&-opened .sidebar-menu {
+		left: 0;
+		width: 100%;
+		text-align: center;
+		transition-delay: .1s;
+	}
+	&-opened .sidebar-hamburger {
+		display: none;
+	}
+	&-hamburger {
+		display: block;
+		position: absolute;
+		top: 2.7rem;
+		left: 50%;
+		transform: translate(-50%);
+		&-icon {
+			width: 2.9rem;
+			height: 2.9rem;
+			fill: @yellow;
+		}
+	}
+}
