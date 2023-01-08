@@ -66,7 +66,7 @@ ul > li {
   min-width: 142rem;
 }
 .main {
-  background: url(/img/bg/hero.jpg) center center / cover no-repeat;
+  background: url(img/bg/hero.jpg) center center / cover no-repeat;
   height: 100vh;
   min-height: 650px;
   position: relative;
@@ -88,13 +88,13 @@ ul > li {
   transition: opacity .3s;
 }
 .main-slider-item-tshirts {
-  background-image: url(/img/content/hero/slider_pic_1.png);
+  background-image: url(img/content/hero/slider_pic_1.png);
 }
 .main-slider-item-games {
-  background-image: url(/img/content/hero/slider_pic_2.png);
+  background-image: url(img/content/hero/slider_pic_2.png);
 }
 .main-slider-item-gifts {
-  background-image: url(/img/content/hero/slider_pic_3.png);
+  background-image: url(img/content/hero/slider_pic_3.png);
 }
 .main-slider-item-active {
   opacity: 1;
@@ -309,7 +309,7 @@ ul > li {
   flex: 1;
   overflow: hidden;
   margin-right: 3rem;
-  background: url(/img/bg/pattern.png) center center / 50rem;
+  background: url(img/bg/pattern.png) center center / 50rem;
   position: relative;
 }
 .collection-content-item:last-child {
@@ -326,12 +326,12 @@ ul > li {
   background: center center / contain no-repeat;
 }
 .collection-content-item-mans::before {
-  background-image: url(/img/collections/collection_man.png);
+  background-image: url(img/collections/collection_man.png);
   left: -18%;
   top: -17%;
 }
 .collection-content-item-womans::before {
-  background-image: url(/img/collections/collection_woman.png);
+  background-image: url(img/collections/collection_woman.png);
   top: -31%;
   width: 80%;
   left: -25%;
